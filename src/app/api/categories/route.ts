@@ -1,6 +1,7 @@
-import { prisma } from "@/utils/connect";
+import { PrismaClient } from ".prisma/client";
 import { NextResponse } from "next/server";
 
+const prisma = new PrismaClient();
 
 // FETCH ALL CATEGORIES
 export const GET = async () => {
@@ -14,4 +15,7 @@ export const GET = async () => {
       { status: 500 }
     );
   }
+};
+export const POST = () => {
+  return new NextResponse("Hello", {status: 200});
 };
