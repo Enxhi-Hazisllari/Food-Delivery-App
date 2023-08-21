@@ -2,7 +2,7 @@ import { prisma } from "@/utils/connect";
 import { NextResponse } from "next/server";
 
 
-// FETCH ALL CATEGORIES
+// FETCH ALL PRODUKTS
 export const GET = async () => {
   try {
     const categories = await prisma.category.findMany();
